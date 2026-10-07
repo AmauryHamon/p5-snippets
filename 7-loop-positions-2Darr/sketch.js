@@ -16,25 +16,13 @@ function setup() {
 }
 
 function draw() {
-  // 60 fois par seconde, en boucle
-  background(220);
-  
-  // if (mouseX < width / 2){
-  //   fill(255, 0, 0);
-  //   ellipse(mouseX, mouseY, 200, 200);
-  // } else {
-  //   fill (0, 0, 255);
-  //   ellipse(mouseX, mouseY, 200, 200);
 
-  // }
+  background(220);
+
   fill(255, 125, 125, 50);
   noStroke();
-  // for (let i = 0; i < positions.length; i++){
-  //     ellipse(positions[i][0], positions[i][1], 100, 100);
-  // }
-  for (let x = 0; x < 50; x++){
-    for (let y = 0; y < 50; y++) {
-        rect(x * 50, y * 50, 30, 30);
-    }
+  for (let i = 0; i < positions.length; i++){
+      ellipse(positions[i][0], positions[i][1], 100, 100);
   }
+  
 }
