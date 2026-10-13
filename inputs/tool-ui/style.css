@@ -1,0 +1,121 @@
+/* CSS RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables to easily theme your UI*/
+:root {
+  --font-family: Helvetica, Arial, sans-serif;
+  --ui-text-primary: #191919;
+  --ui-text-secondary: #555555;
+  --ui-bg-primary: #f8f8f8;
+  --ui-bg-secondary: #e0e0e0;
+
+  --ui-width: 320px;
+}
+
+/* Apply global styling if necessary */
+body {
+  font-family: var(--font-family);
+  color: var(--ui-text-primary);
+  background-color: var(--ui-bg-primary);
+}
+
+canvas {
+  display: block;
+}
+
+button {
+  border: 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--ui-bg-secondary);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--ui-bg-primary);
+  }
+}
+input[type="text"], 
+input[type="number"] {
+  width: 100%;
+  padding: 0.25rem;
+}
+input[type="color"] {
+  padding: 0;
+  inline-size: 2rem;
+  block-size: 2rem;
+}
+
+
+#openUIBtn {
+  position: fixed;
+  z-index: 5;
+  top: 1rem;
+  left: 1rem;
+  
+  &.hidden {
+    display: none;
+  }
+}
+
+
+
+#ui {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: var(--ui-width);
+  height: 100vh;
+  overflow-y: auto;
+  background-color: var(--ui-bg-primary);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+  /* Hide UI when JS adds the hidden class */
+  &.hidden {
+    display: none;
+  }
+
+  /* UI items */
+  
+  & #closeUIBtn {
+    padding: 0.5rem 1rem;
+  }
+
+  & .section-title {
+    font-weight: bold;
+    margin-top: 0.5rem;
+    font-size: 1.15rem;
+  }
+
+  /* 2 col layout for all inputs */
+  & .input-wrapper {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    & label {
+      color: var(--ui-text-secondary);
+    }
+  }
+}
+
+.shortcuts-content {
+  font-size: 0.75rem;
+  & p {
+    margin-bottom: 0.5rem;
+  }
+  & kbd {
+    display: inline-block;
+    padding: 0.1rem 0.3rem;
+    background-color: var(--ui-bg-secondary);
+    border-radius: .25rem;
+  }
+}
