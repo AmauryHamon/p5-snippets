@@ -6,3 +6,11 @@ html, body {
 canvas {
   display: block;
 }
+
+#client-count {
+  position: absolute;
+  z-index: 10;
+  top: .5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
