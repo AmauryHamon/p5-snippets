@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+
+  <body>
+    <div class="interface">
+        <h1>Poster Generator</h1>
+        <div class="controls">
+            <button id="regenerateBtn">Regenerate Composition</button>
+            <button id="printBtn">Print to PDF</button>
+            <div class="colors">
+              <label for="color1">1</label><input type="color" id="color1" >
+              <label for="color2">2</label><input type="color" id="color2" >
+              <label for="color3">3</label><input type="color" id="color3" >
+              <label for="color4">4</label><input type="color" id="color4" >
+            </div>
+            <button id="randomColorsBtn">Randomize Colors</button>
+        </div>
+    </div>
+
+    <div id="poster" class="poster">
+        <div class="poster-title">
+            <h1>Title</h1>
+        </div>
+        <div class="poster-subtitle">
+            <p>A3 Poster Series</p>
+        </div>
+    </div>
+    <script src="sketch.js"></script>
+  </body>
+</html>
