@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tool 101</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <button id="openUIBtn" class="hidden" onclick="toggleUI()">Settings</button>
+    <div id="ui">
+      <button id="closeUIBtn" onclick="toggleUI()">Close</button>
+      <div class="section-title">Colors</div>
+      <div class="input-wrapper">
+        <label for="fontColor">Text color</label>
+        <input type="color" id="fontColor" value="#ff0000">
+      </div>
+      <div class="input-wrapper">
+        <label for="bgColor">Background color</label>
+        <input type="color" id="bgColor" value="#ffffff">
+      </div>
+      <div class="input-wrapper">
+        <label for="shapeColor">Shape color</label>
+        <input type="color" id="shapeColor" value="#000000">
+      </div>
+      <div class="section-title">Grid</div>
+      <div class="input-wrapper">
+        <label for="myNumberInputX">Columns</label>
+        <input type="number" id="myNumberInputX" value="5" min="0" max="20" step="1">
+      </div>
+      <div class="input-wrapper">
+        <label for="myNumberInputY">Rows</label>
+        <input type="number" id="myNumberInputY" value="5" min="0" max="20" step="1">
+      </div>
+      <div class="section-title">Typography</div>
+      <div class="input-wrapper">
+        <label for="mySlider">Slider</label>
+        <input type="range" id="mySlider" value="250" min="0" max="500">
+      </div>
+      <div class="input-wrapper">
+        <label for="myText">Text</label>
+        <input type="text" id="myText" value="Hello, World!">
+      </div>
+      <!-- <div class="section-title">Magic</div>
+        <button id="myButton" onClick="randomize()">Click Me</button>
+      <div class="input-wrapper">
+        <label for="autoplayCheckbox">Autoplay</label>
+        <input type="checkbox" id="autoplayCheckbox">
+      </div>  
+      <div class="input-wrapper">
+        <label for="intervalSlider">Interval</label>
+        <input type="range" id="intervalSlider" value="500" min="1" max="2500">
+      </div>  
+      <div class="section-title">Presets</div>
+      <div class="input-wrapper">
+        <button type="button" onclick="savePreset()">Save JSON</button>
+        <button type="button" onclick="document.getElementById('presetFile').click()">Load JSON</button>
+        <input type="file" id="presetFile" accept=".json,application/json" onchange="loadPreset(event)" hidden>
+      </div>
+      <div class="section-title">Export</div>
+      <button type="button" onclick="exportSketch()">Save PNG</button>
+      <div class="section-title">Shortcuts</div>
+      <div class="shortcuts-content">
+        <p><kbd>r</kbd> randomize</p>
+        <p><kbd>s</kbd> save PNG</p>
+        <p><kbd>Escape</kbd> Toggle UI</p>
+      </div>
+    </div> -->
+    <script src="sketch.js"></script>
+  </body>
+</html>
